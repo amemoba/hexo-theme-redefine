@@ -106,7 +106,7 @@ home_banner:
     light: /images/background-light.webp # light mode
     dark: /images/background-dark.webp # dark mode
   # Home banner title
-  title: Amemoba 神戸岡本・摂津本山店
+  title: Amemoba 神戸岡本・摂津本山店 # <img src="/images/amemoba-logo.png" alt="Amemoba">
   # Home banner subtitle
   subtitle:
     text: [
@@ -129,7 +129,7 @@ home_banner:
     smart_backspace: true # Whether to smart backspace
   # Color of home banner text
   text_color:
-    light: "#ffffff" # light mode
+    light: "#ffffff" # "#dc2e2f" # light mode
     dark: "#d1d1b6" # dark mode
   # Specific style of the text
   text_style:
@@ -180,6 +180,9 @@ navbar:
     Home:
       path: /
       icon: fa-regular fa-house # can be empty
+    iPhone_Purchase:
+      path: https://amemoba.com/smartphone/iphone/
+      icon: fa-light fa-mobile
     # Archives: 
     #   path: /archives 
     #   icon: fa-regular fa-archive # can be empty

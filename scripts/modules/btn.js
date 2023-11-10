@@ -45,11 +45,36 @@ function postBtn(args) {
     cls = ' ' + cls;
   }
   if (icon.length > 0) {
-    return `<a class="button ${cls}" ${url} title='${text}'><i class='${icon}'></i> ${text}</a>`;
+    return `<a class="button ${cls}" ${url} title='${text}'><i class='${icon}'></i>　${text}</a>`;
   }
   return `<a class="button ${cls}" ${url} title='${text}'>${text}</a>`;
 
 }
 
+function postButton(args, content) {
+  const colorKeywords = ['info', 'primary', 'success', 'warning', 'danger']
+  const sizeKeywords = ['small', 'default', 'large']
+
+  let colorClass = 'info'
+  if (args[0] && colorKeywords.includes(args[0])) {
+    colorClass = args[0]
+  }
+
+  let sizeClass = 'regular';
+  if (args[1] === 'small' || args[1] === 'default') {
+    sizeClass = 'regular';
+  }
+  if (args[1] === 'large') {
+    sizeClass = 'large';
+  }
+
+  let attribute = ''
+  if (args[2]) {
+    attribute = `href="${args[2]}"`;
+  }
+
+  return `<a class="button center ${sizeClass}" ${attribute} title="${colorClass} button">${content}</a>`;
+}
+
 hexo.extend.tag.register('btn', postBtn);
-hexo.extend.tag.register('button', postBtn);
+hexo.extend.tag.register('button', postButton, true);
