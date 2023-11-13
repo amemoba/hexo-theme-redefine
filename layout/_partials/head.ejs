@@ -4,7 +4,7 @@
     <meta name="keywords" content="<%= page.keywords || config.keywords || 'Hexo Theme Redefine' %>">
     <% if (!theme.global.open_graph) { %>
         <meta name="description" content="<%= page.description || config.description || 'Hexo Theme Redefine' %>">
-    <% }%>
+    <% } %>
     <meta name="author" content="<%= theme.info.author || config.author || 'Redefine Team' %>">
     <!-- preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,7 +71,7 @@
         <% if (title) { %>
             <%= title %> -
         <% } %>
-        <%= theme.info.title || config.title || 'Redefine Theme' %>
+        <%= config.title || 'Redefine Theme' %>
     </title>
     <%- css('css/style') %>
 
