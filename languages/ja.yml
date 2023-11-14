@@ -44,7 +44,7 @@ shuoshuo: 話す
 # ----------------------------------------
 site_uv: 訪問者数
 site_pv: 総アクセス数
-read-more: 全文を読む
+read_more: もっと見る
 wordcount: 字
 min2read: 分
 changelog: ログを更新
